@@ -29,7 +29,7 @@ class beliController extends Controller
      */
     public function store(Request $request)
     {
-        $hargaMelon = 25000;
+        $hargaMelon = $request->harga;
         $berat = $request->berat;
         $request->request->add(['harga' => $berat*$hargaMelon]);
         $validatedData = $request->validate([
